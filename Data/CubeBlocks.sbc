@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+  <Definition xsi:type="MyObjectBuilder_VirtualMassDefinition">
+      <Id>
+        <TypeId>VirtualMass</TypeId>
+        <SubtypeId>LargeTimerSequencer</SubtypeId>
+      </Id>
+      <DisplayName>Sequencer</DisplayName>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\seq.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models/Sequencer/TimerBlock_large.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+		<Component Subtype="Computer" Count="5" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="SteelPlate" Count="30" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Left" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+        <MountPoint Side="Right" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+        <MountPoint Side="Top" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+        <MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" Default="true" />
+        <MountPoint Side="Back" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+        <MountPoint Side="Front" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.40" File="Models\Cubes\Large\TimerBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.70" File="Models\Cubes\Large\TimerBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.90" File="Models\Cubes\Large\TimerBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>TimerSequencer</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <VirtualMass>0</VirtualMass>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <RequiredPowerInput>0.005</RequiredPowerInput>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <EmissiveColorPreset>GravityBlock</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+    </Definition>
+	
+    <Definition xsi:type="MyObjectBuilder_VirtualMassDefinition">
+      <Id>
+        <TypeId>VirtualMass</TypeId>
+        <SubtypeId>SmallTimerSequencer</SubtypeId>
+      </Id>
+      <DisplayName>Sequencer</DisplayName>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\seq.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models/Sequencer/TimerBlock_small.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+		<Component Subtype="Computer" Count="5" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="SteelPlate" Count="30" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.20" File="Models\Cubes\Small\VirtualMassBlockConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\VirtualMassBlockConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.80" File="Models\Cubes\Small\VirtualMassBlockConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>TimerSequencer</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <VirtualMass>0</VirtualMass>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      <RequiredPowerInput>0.005</RequiredPowerInput>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <EmissiveColorPreset>GravityBlock</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+  </Definition>  
+  </CubeBlocks>
+</Definitions>
